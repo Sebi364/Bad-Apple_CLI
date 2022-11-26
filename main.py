@@ -1,7 +1,5 @@
 #!/usr/bin/python
 from os import system as cmd
-from os import listdir
-from os import name
 from time import sleep, time
 from platform import system
 import zipfile
@@ -28,7 +26,7 @@ for x in reversed(List_Of_Files):
     if SYSTEM_TYPE == "Windows":
         cmd("cls")
     else:
-        cmd(f"clear ; cat {PATH_TO_FRAMES}{x}") #clear for Linux (bash)
+        cmd("clear") #clear for Linux (bash)
 
     #print file content
     file_content = frames_file.read(x).decode()
